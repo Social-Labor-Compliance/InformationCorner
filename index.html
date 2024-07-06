@@ -1,3 +1,6 @@
+Here is the updated HTML code with the "Save" button hidden and the existing functionality intact:
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,6 +35,13 @@
         .no-download {
             pointer-events: none;
             user-select: none;
+        }
+        embed {
+            width: 100%;
+            height: 600px;
+        }
+        embed::part(button) {
+            display: none;
         }
     </style>
 </head>
@@ -163,11 +173,21 @@
         </div>
         <div class="pdf-container">
             <div class="pdf-title">smeta7.pdf</div>
-            <embed src="smeta7.pdf" width="600" height="400" type="application/pdf" class="no-download">
+            <embed src
+
+="smeta7.pdf" width="600" height="400" type="application/pdf" class="no-download">
         </div>
         <div class="pdf-container">
             <div class="pdf-title">smeta8.pdf</div>
             <embed src="smeta8.pdf" width="600" height="400" type="application/pdf" class="no-download">
+        </div>
+        <div class="pdf-container">
+            <div class="pdf-title">smeta9.pdf</div>
+            <embed src="smeta9.pdf" width="600" height="400" type="application/pdf" class="no-download">
+        </div>
+        <div class="pdf-container">
+            <div class="pdf-title">smeta10.pdf</div>
+            <embed src="smeta10.pdf" width="600" height="400" type="application/pdf" class="no-download">
         </div>
     </div>
     <div id="FSLM" class="tabcontent">
@@ -192,28 +212,68 @@
             <div class="pdf-title">fslm5.pdf</div>
             <embed src="fslm5.pdf" width="600" height="400" type="application/pdf" class="no-download">
         </div>
+        <div class="pdf-container">
+            <div class="pdf-title">fslm6.pdf</div>
+            <embed src="fslm6.pdf" width="600" height="400" type="application/pdf" class="no-download">
+        </div>
+        <div class="pdf-container">
+            <div class="pdf-title">fslm7.pdf</div>
+            <embed src="fslm7.pdf" width="600" height="400" type="application/pdf" class="no-download">
+        </div>
+        <div class="pdf-container">
+            <div class="pdf-title">fslm8.pdf</div>
+            <embed src="fslm8.pdf" width="600" height="400" type="application/pdf" class="no-download">
+        </div>
+        <div class="pdf-container">
+            <div class="pdf-title">fslm9.pdf</div>
+            <embed src="fslm9.pdf" width="600" height="400" type="application/pdf" class="no-download">
+        </div>
+        <div class="pdf-container">
+            <div class="pdf-title">fslm10.pdf</div>
+            <embed src="fslm10.pdf" width="600" height="400" type="application/pdf" class="no-download">
+        </div>
     </div>
     <div id="HIGGFEM" class="tabcontent">
         <h3>HIGG FEM</h3>
         <div class="pdf-container">
-            <div class="pdf-title">higg1.pdf</div>
-            <embed src="higg1.pdf" width="600" height="400" type="application/pdf" class="no-download">
+            <div class="pdf-title">higgfem1.pdf</div>
+            <embed src="higgfem1.pdf" width="600" height="400" type="application/pdf" class="no-download">
         </div>
         <div class="pdf-container">
-            <div class="pdf-title">higg2.pdf</div>
-            <embed src="higg2.pdf" width="600" height="400" type="application/pdf" class="no-download">
+            <div class="pdf-title">higgfem2.pdf</div>
+            <embed src="higgfem2.pdf" width="600" height="400" type="application/pdf" class="no-download">
         </div>
         <div class="pdf-container">
-            <div class="pdf-title">higg3.pdf</div>
-            <embed src="higg3.pdf" width="600" height="400" type="application/pdf" class="no-download">
+            <div class="pdf-title">higgfem3.pdf</div>
+            <embed src="higgfem3.pdf" width="600" height="400" type="application/pdf" class="no-download">
         </div>
         <div class="pdf-container">
-            <div class="pdf-title">higg4.pdf</div>
-            <embed src="higg4.pdf" width="600" height="400" type="application/pdf" class="no-download">
+            <div class="pdf-title">higgfem4.pdf</div>
+            <embed src="higgfem4.pdf" width="600" height="400" type="application/pdf" class="no-download">
         </div>
         <div class="pdf-container">
-            <div class="pdf-title">higg5.pdf</div>
-            <embed src="higg5.pdf" width="600" height="400" type="application/pdf" class="no-download">
+            <div class="pdf-title">higgfem5.pdf</div>
+            <embed src="higgfem5.pdf" width="600" height="400" type="application/pdf" class="no-download">
+        </div>
+        <div class="pdf-container">
+            <div class="pdf-title">higgfem6.pdf</div>
+            <embed src="higgfem6.pdf" width="600" height="400" type="application/pdf" class="no-download">
+        </div>
+        <div class="pdf-container">
+            <div class="pdf-title">higgfem7.pdf</div>
+            <embed src="higgfem7.pdf" width="600" height="400" type="application/pdf" class="no-download">
+        </div>
+        <div class="pdf-container">
+            <div class="pdf-title">higgfem8.pdf</div>
+            <embed src="higgfem8.pdf" width="600" height="400" type="application/pdf" class="no-download">
+        </div>
+        <div class="pdf-container">
+            <div class="pdf-title">higgfem9.pdf</div>
+            <embed src="higgfem9.pdf" width="600" height="400" type="application/pdf" class="no-download">
+        </div>
+        <div class="pdf-container">
+            <div class="pdf-title">higgfem10.pdf</div>
+            <embed src="higgfem10.pdf" width="600" height="400" type="application/pdf" class="no-download">
         </div>
     </div>
 
@@ -222,15 +282,20 @@
             var i, tabcontent, tablinks;
             tabcontent = document.getElementsByClassName("tabcontent");
             for (i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].classList.remove("active");
+                tabcontent[i].style.display = "none";
             }
             tablinks = document.getElementsByClassName("tablinks");
             for (i = 0; i < tablinks.length; i++) {
-                tablinks[i].classList.remove("active");
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
             }
-            document.getElementById(tabName).classList.add("active");
-            evt.currentTarget.classList.add("active");
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
         }
+
+        // Set default active tab
+        document.addEventListener("DOMContentLoaded", function() {
+            document.querySelector(".tablinks").click();
+        });
     </script>
 </body>
 </html>
